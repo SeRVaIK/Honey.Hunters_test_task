@@ -45,6 +45,9 @@ body._lock {
 
 .wrapper {
     min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -103,6 +106,9 @@ body._lock {
     .header__container {
         padding: 126px 0px 199px 0px;
     }
+    .header__top {
+        margin-bottom: 69px;
+    }
     .header__logo {
         margin-bottom: 160px;
     }
@@ -152,7 +158,7 @@ body._lock {
 .form__column label {
     font-weight: 500;
     font-size: 30px;
-    line-height: 35px;
+    line-height: 117%;
     color: #D7D7D7;
     margin-bottom: 17px;
     position: relative;
@@ -162,7 +168,7 @@ body._lock {
     position: absolute;
     font-weight: 500;
     font-size: 36px;
-    line-height: 42px;
+    line-height: 116%;
     color: red;
     content: "*";
     margin: -5px 0px 0px 6px;
@@ -180,17 +186,21 @@ body._lock {
     margin: -9px 0px 0px 8px;
 }
 
-.required {}
-
 .input {
-    padding: 24px 26px;
+    padding: 24px 25px;
     font-size: 26px;
-    line-height: 30px;
+    line-height: 116%;
+    outline: none;
     color: #FFFFFF;
     background: #2F3136;
-    border: 1px solid #BE393B;
+    caret-color: #7E7E7E;
+    border: 1px solid #FFFFFF;
     border-radius: 10px;
     margin: 0px 0px 68px 0px;
+}
+
+.input:focus {
+    border: 1px solid #BE393B;
 }
 
 .input:last-child {
@@ -222,13 +232,57 @@ textarea {
     border-radius: 10px;
     font-weight: 500;
     font-size: 30px;
-    line-height: 35px;
+    line-height: 117%;
     padding: 22px 36px;
     text-align: center;
     color: #FFFFFF;
 }
 
 .btn-submit {}
+
+@media (min-width:2500px) {
+    .header__bottom {
+        margin: 0px 0px 0px -23px;
+        max-width: 2209px;
+    }
+    .form__column label {
+        font-weight: 500;
+        font-size: 70px;
+        line-height: 117%;
+        margin-bottom: 40px;
+    }
+    .form__column:last-child label {
+        margin-bottom: 39px;
+    }
+    .input {
+        min-width: 960px;
+        font-size: 60px;
+        line-height: 116%;
+        padding: 66px 62px;
+        margin: 0px 0px 145px 0px;
+    }
+    .input:last-child {
+        margin: 0px 0px 218px 0px;
+    }
+    .input__mail {
+        padding: 62px 62px;
+    }
+    textarea {
+        min-height: 672px;
+    }
+    .btn {
+        font-weight: 500;
+        font-size: 72px;
+        line-height: 117%;
+        padding: 50px 74px;
+    }
+}
+
+@media (min-width:1500px) {
+    .header__bottom {
+        margin: 0px auto;
+    }
+}
 
 @media (max-width: 769px) {
     .input {
@@ -244,4 +298,15 @@ textarea {
     .form__item {
         display: inline-block;
     }
+}
+
+
+/* ------------------------------------------MAIN------------------------------------------ */
+
+
+/* ------------------------------------------FOOTER------------------------------------------ */
+
+.footer {
+    background-color: #2D3136;
+    color: #FFFFFF;
 }
