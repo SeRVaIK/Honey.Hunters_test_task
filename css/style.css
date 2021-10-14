@@ -471,6 +471,12 @@ textarea {
     margin: 2px 1px 0px 0px;
 }
 
+@media (max-width: 426px) {
+    .footer__social-list {
+        display: none;
+    }
+}
+
 .footer__social-item {}
 
 .footer__social-link {}
@@ -487,23 +493,42 @@ textarea {
     background-position: center;
 }
 
-.footer__social-icon-vk {}
-
-.footer__social-icon-fb {}
-
 .footer__social-icon-vk {
     background-image: url(../img/vk.svg);
     margin-right: 48px;
     background-size: 70%;
 }
 
+.footer__social-icon-fb {
+    background-image: url(../img/fb.svg);
+    background-size: 30%;
+}
+
 @media (min-width: 2500px) {
     .footer__social-icon-vk {
         margin-right: 112px;
     }
-}
-
-.footer__social-icon-fb {
-    background-image: url(../img/fb.svg);
-    background-size: 30%;
+    .footer__body {
+        padding: 95px 0px;
+        margin: 0px 0px 0px -1px;
+    }
+    .footer__logo img {
+        width: 492px;
+        height: 100px;
+    }
+    .footer__social-list {
+        display: flex;
+        margin: -1px 33px 0px 0px;
+    }
+    .footer__social-icon {
+        width: 90px;
+        height: 90px;
+    }
+    .footer__social-icon-vk {
+        background-size: 58%;
+    }
+    .footer__social-icon-fb {
+        background-image: url(../img/fb.svg);
+        background-size: 24%;
+    }
 }
