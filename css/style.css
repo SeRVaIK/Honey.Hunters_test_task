@@ -56,16 +56,17 @@ body._lock {
 }
 
 .header__container {
-    padding: 54px 0px 95px 0px;
+    padding: 54px 15px 98px 15px;
 }
 
 ._container {
     max-width: 1050px;
     margin: 0px auto;
+    box-sizing: content-box;
 }
 
 .header__top {
-    margin-bottom: 42px;
+    margin-bottom: 54px;
 }
 
 .header__logo {
@@ -118,21 +119,92 @@ body._lock {
 
 /* ------------------------------------------HEADER-BOTTOM------------------------------------------ */
 
-.header__form {}
+.header__bottom {
+    max-width: 962px;
+}
+
+.header__bottom-form {
+    margin: 0px 0px 0px -2px;
+}
 
 .form {}
 
-.form__body {}
+.form__body {
+    display: flex;
+    flex-direction: column;
+}
 
-.form__item {}
+.form__item {
+    display: flex;
+    justify-content: space-between;
+}
 
-.form__column {}
+.form__column {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+}
 
-.form__column label {}
+.form__column:last-child {
+    margin: -2px 2px 0px 0px;
+}
+
+.form__column label {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #D7D7D7;
+    margin-bottom: 17px;
+    position: relative;
+}
+
+.form__column label::after {
+    position: absolute;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    color: red;
+    content: "*";
+    margin: -5px 0px 0px 6px;
+}
+
+.form__column label:not(:nth-child(1))::after {
+    margin: -8px 0px 0px 8px;
+}
+
+.form__column:last-child label {
+    margin-bottom: 19px;
+}
+
+.form__column:last-child label::after {
+    margin: -9px 0px 0px 8px;
+}
 
 .required {}
 
-.input {}
+.input {
+    padding: 24px 26px;
+    font-size: 26px;
+    line-height: 30px;
+    color: #FFFFFF;
+    background: #2F3136;
+    border: 1px solid #BE393B;
+    border-radius: 10px;
+    margin: 0px 0px 68px 0px;
+}
+
+.input:last-child {
+    margin: 0px 0px 82px 0px;
+}
+
+.input__mail {
+    padding: 27px 26px 26px 26px;
+}
+
+textarea {
+    min-height: 285px;
+    resize: none;
+}
 
 .input__name {}
 
@@ -140,8 +212,20 @@ body._lock {
 
 ._email {}
 
-.form__btn {}
+.form__btn {
+    align-self: flex-end;
+    margin: 0px 2px 0px 0px;
+}
 
-.btn {}
+.btn {
+    background: #BE393B;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    padding: 22px 36px;
+    text-align: center;
+    color: #FFFFFF;
+}
 
 .btn-submit {}
