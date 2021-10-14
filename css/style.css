@@ -53,28 +53,15 @@ body._lock {
 .header {
     background-color: #2D3136;
     color: #FFFFFF;
-    padding: 54px 0px 95px 0px;
 }
 
-.header__container {}
+.header__container {
+    padding: 54px 0px 95px 0px;
+}
 
 ._container {
     max-width: 1050px;
     margin: 0px auto;
-}
-
-@media (min-width:1500px) {
-    ._container {
-        max-width: 1200px;
-        margin: 0px auto;
-    }
-}
-
-@media (min-width:2500px) {
-    ._container {
-        max-width: 1200px;
-        margin: 0px auto;
-    }
 }
 
 .header__top {
@@ -98,6 +85,34 @@ body._lock {
 .header__contact-icon img {
     width: 240px;
     height: 240px;
+}
+
+@media (min-width:1500px) {
+    ._container {
+        max-width: 1200px;
+        margin: 0px auto;
+    }
+}
+
+@media (min-width:2500px) {
+    ._container {
+        max-width: 2358px;
+        margin: 0px auto;
+    }
+    .header__container {
+        padding: 126px 0px 199px 0px;
+    }
+    .header__logo {
+        margin-bottom: 160px;
+    }
+    .header__logo img {
+        width: unset;
+        height: unset;
+    }
+    .header__contact-icon img {
+        width: unset;
+        height: unset;
+    }
 }
 
 
