@@ -63,6 +63,20 @@ body._lock {
     margin: 0px auto;
 }
 
+@media (min-width:1500px) {
+    ._container {
+        max-width: 1200px;
+        margin: 0px auto;
+    }
+}
+
+@media (min-width:2500px) {
+    ._container {
+        max-width: 1200px;
+        margin: 0px auto;
+    }
+}
+
 .header__top {
     margin-bottom: 42px;
 }
