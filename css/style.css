@@ -117,3 +117,31 @@ body._lock {
 
 
 /* ------------------------------------------HEADER-BOTTOM------------------------------------------ */
+
+.header__form {}
+
+.form {}
+
+.form__body {}
+
+.form__item {}
+
+.form__column {}
+
+.form__column label {}
+
+.required {}
+
+.input {}
+
+.input__name {}
+
+._req {}
+
+._email {}
+
+.form__btn {}
+
+.btn {}
+
+.btn-submit {}
