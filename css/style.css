@@ -140,7 +140,7 @@ body._lock {
 }
 
 .form__column {
-    width: 420px;
+    min-width: 420px;
     display: flex;
     flex-direction: column;
 }
@@ -229,3 +229,19 @@ textarea {
 }
 
 .btn-submit {}
+
+@media (max-width: 769px) {
+    .input {
+        width: 100%;
+    }
+    .form__column {
+        min-width: unset;
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 479px) {
+    .form__item {
+        display: inline-block;
+    }
+}
