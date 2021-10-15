@@ -218,6 +218,10 @@ body._lock {
     margin: 0px 0px 82px 0px;
 }
 
+.input._error {
+    box-shadow: 0 0 15px red;
+}
+
 .input__mail {
     padding: 27px 26px 26px 26px;
 }
