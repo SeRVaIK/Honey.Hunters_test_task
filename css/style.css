@@ -476,8 +476,8 @@ textarea {
 }
 
 .footer__logo img {
-    width: 494px;
-    height: 100px;
+    width: 210px;
+    height: 42px;
 }
 
 .footer__social-list {
@@ -518,13 +518,6 @@ textarea {
     background-size: 30%;
 }
 
-@media (max-width: 2500px) {
-    .footer__logo img {
-        width: 212px;
-        height: 42px;
-    }
-}
-
 @media (min-width: 2500px) {
     .footer__social-icon-vk {
         margin-right: 112px;
@@ -532,6 +525,10 @@ textarea {
     .footer__body {
         padding: 95px 0px;
         margin: 0px 0px 0px -1px;
+    }
+    .footer__logo img {
+        width: 492px;
+        height: 100px;
     }
     .footer__social-list {
         display: flex;
