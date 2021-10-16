@@ -5,20 +5,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('form');
     form.addEventListener('submit', formSend);
 
-    async function formSend(e) {
+
+    function formSend(e) {
         e.preventDefault();
-        // let error = 0;
+
         let error = formValidate(form);
 
         let formData = new FormData(form);
 
         if (error === 0) {
 
-            form.classList.add('_sending');
+            let cardCreation = document.querySelector('.cards__container');
 
-            let list = document.querySelector('.cards__container');
+            // let cardTitle = form.name.value
+            //     .split('<').join('&lt;')
+            //     .split('>').join('&gt;');
 
-            list.innerHTML += `
+            cardCreation.innerHTML += `
               <div class="card__column">
                   <div class="cards__body">
                       <div class="cards__title">${form.name.value}</div>
@@ -28,22 +31,36 @@ document.addEventListener('DOMContentLoaded', function() {
               </div>
             `
         } else {
-            alert('Заполните обязательные поля!')
+            alert('Поля пустые, либо заполнены некорректно! Повторите ввод!')
             form.classList.remove('_sending');
         }
         form.reset();
     }
 
+
+    // Функция валидации формы
     function formValidate(form) {
 
+        // Счётчик ошибок - 0 по умолчанию
         let error = 0;
+        // Слушаем поля с классом _req
         let formReq = document.querySelectorAll('._req');
 
+        // Пробегаем по массиву обязательных полей
         for (let index = 0; index < formReq.length; index++) {
+            // Собираем инпуты с обязательным заполнением 
             const input = formReq[index];
 
+            // На всякий случай убираем класс _error
             formRemoveError(input);
+            // Во имя борьмы с инъекциями экранируем спец-символы
+            input.value = input.value
+                .split('&').join('&amp;')
+                .split('<').join('&lt;')
+                .split('>').join('&gt;')
+                .split('"').join('&quot;');
 
+            // Валидация поля ввода эл.почты
             if (input.classList.contains('_email')) {
 
                 if (emailTest(input)) {
@@ -59,7 +76,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         return error;
+
     }
+
+
 
     function formAddError(input) {
         // Добавляем родительскому объекту класс error
