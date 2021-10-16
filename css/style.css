@@ -349,14 +349,16 @@ textarea {
 
 .card__column {
     flex: 0 1 33.333%;
+    margin-bottom: 53px;
 }
 
 .cards__body {
+    height: 100%;
+    max-width: 330px;
     display: flex;
     flex-direction: column;
     text-align: center;
     min-height: 360px;
-    margin-bottom: 53px;
     color: #6D737B;
     background: #E9EEF3;
 }
@@ -396,7 +398,11 @@ textarea {
     padding: 0px 20px 30px;
 }
 
-@media (min-width:1500px) {}
+@media (min-width:1500px) {
+    .cards__body {
+        max-width: 380px;
+    }
+}
 
 @media (max-width: 769px) {
     .main__container {
@@ -439,6 +445,7 @@ textarea {
         padding: 0 68px;
     }
     .cards__body {
+        max-width: 660px;
         min-height: 815px;
         margin-bottom: 130px;
     }
