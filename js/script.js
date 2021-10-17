@@ -17,10 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
             let cardCreation = document.querySelector('.cards__container');
 
-            // let cardTitle = form.name.value
-            //     .split('<').join('&lt;')
-            //     .split('>').join('&gt;');
-
             cardCreation.innerHTML += `
               <div class="card__column">
                   <div class="cards__body">
