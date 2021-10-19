@@ -5,13 +5,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('form');
     form.addEventListener('submit', formSend);
 
-
     function formSend(e) {
         e.preventDefault();
 
         let error = formValidate(form);
 
-        let formData = new FormData(form);
 
         if (error === 0) {
 
@@ -20,19 +18,17 @@ document.addEventListener('DOMContentLoaded', function() {
             cardCreation.innerHTML += `
               <div class="card__column">
                   <div class="cards__body">
-                      <div class="cards__title">${form.name.value}</div>
-                      <div class="cards__email">${form.mail.value}</div>
-                      <div class="cards__text">${form.comment.value}</div>
+                      <div class="cards__title">${form[0].value}</div>
+                      <div class="cards__email">${form[1].value}</div>
+                      <div class="cards__text">${form[2].value}</div>
                   </div>
               </div>
             `
         } else {
             alert('Поля пустые, либо заполнены некорректно! Повторите ввод!')
-            form.classList.remove('_sending');
         }
         form.reset();
     }
-
 
     // Функция валидации формы
     function formValidate(form) {
