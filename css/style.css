@@ -391,6 +391,7 @@ textarea {
     line-height: 117%;
     padding: 5px 5px;
     margin: 0px 0px 35px 0px;
+    word-break: break-word;
 }
 
 .cards__text {
